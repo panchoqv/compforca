@@ -78,6 +78,22 @@ scenarios_order <- function (scenarios) {
     return(scenarios)
 }
 
+kernels_order <- function (kernels) {
+    kernels[kernels=='l+p']    = 'a'
+    kernels[kernels=='l+r']    = 'b'
+    kernels[kernels=='p+r']    = 'c'
+    kernels[kernels=='l×r']    = 'd'
+    kernels[kernels=='l×p']    = 'e'
+    kernels[kernels=='p×r']    = 'f'
+    kernels[kernels=='l+p+r']  = 'g'
+    kernels[kernels=='l+p×r']  = 'h'
+    kernels[kernels=='l×r+p']  = 'i'
+    kernels[kernels=='l×p+r']  = 'j'
+    kernels[kernels=='l×p×r']  = 'k'
+
+    return(kernels)
+}
+
 scenarios <- c("temperature", "rain", "sales", "gym_memberships", "wage", "facebook_friends")
 readable_scenarios <- c("Temperature", "Rain", "Sales", "Gym members", "Salary", "FB Friends")
 subconditions = c(1, 2, 3)
